@@ -1,0 +1,15 @@
+.header img {
+    max-width: 15rem;
+    margin: 1rem;
+}
+.header{
+    border-bottom: 2px solid lightgrey;
+}
+
+@media only screen and (max-width:768px){
+    .header img {
+        max-width: 8rem;
+        margin: .5rem;
+    }
+
+}

@@ -1,0 +1,26 @@
+.navLink{
+    float: right;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    /* display: inline; */
+}
+
+.navLink a {
+    color: black;
+    padding-right: 1rem;
+}
+
+.navLink a:link{
+    text-decoration: none;
+}
+
+@media only screen and (max-width:768px){
+    .navLink{
+        /* float: left; */
+        /* margin-right: 1rem; */
+        margin-top: 0rem;
+       font-size: 15px;
+        /* display: inline; */
+    }
+
+}
