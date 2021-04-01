@@ -41,9 +41,9 @@ function App() {
             <PrivateRoute path='/orders'>
               <Orders></Orders>
             </PrivateRoute>
-            <PrivateRoute path='/admin'>
+            <Route path='/admin'>
              <Admin></Admin>
-            </PrivateRoute>
+            </Route>
           
 
             <Route path='/login'>
