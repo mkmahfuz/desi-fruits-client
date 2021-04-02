@@ -13,17 +13,21 @@ import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
 import Orders from "./components/Orders/Orders";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Checkout from "./components/Checkout/Checkout";
 
 
 //app related
 export const UserContext = createContext();
+export const CheckoutContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
+  const [checkoutProduct, setCheckoutProduct] = useState('');
 
   return (
     <>
       <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+        <CheckoutContext.Provider value={[checkoutProduct, setCheckoutProduct]}>
 
         <Router>
           <Header user={loggedInUser}></Header>
@@ -36,6 +40,9 @@ function App() {
             </Route>
             <Route path='/deal'>
               <Deal></Deal>
+            </Route>
+            <Route path='/checkout'>
+              <Checkout></Checkout>
             </Route>
 
             <PrivateRoute path='/orders'>
@@ -55,7 +62,7 @@ function App() {
           </Switch>
           <Footer></Footer>
         </Router>
-
+        </CheckoutContext.Provider>
       </UserContext.Provider>
     </>
   );

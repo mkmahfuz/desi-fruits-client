@@ -1,16 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import './Fruit.css';
+import { useHistory } from 'react-router-dom';
+import { CheckoutContext } from '../../App';
 
 const Fruit = (props) => {
     const { _id, name, price, quantity, imgurl } = props.fruit;
+    const history = useHistory();
+    const [checkoutProduct, setCheckoutProduct] = useContext(CheckoutContext);
+
+    const handleClick = (id) => {
+        setCheckoutProduct(id);        
+        const url = '/checkout';
+        history.push(url);
+    }
+
+
     return (
         <Card className='trSingle'>
             <Card.Img variant='top' src={imgurl} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
 
-                <Card.Footer className="text-muted" id='card-footer'><span>{price}</span><Button variant="primary">Buy Now</Button></Card.Footer>
+                <Card.Footer className="text-primary" id='card-footer'>
+                    <span>Taka {price}</span><Button variant="primary" size="sm" onClick={() => handleClick(_id)}>Buy Now</Button>
+                    </Card.Footer>
             </Card.Body>
         </Card>
 

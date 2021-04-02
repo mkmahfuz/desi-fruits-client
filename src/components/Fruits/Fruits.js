@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Fruit from '../Fruit/Fruit';
-import { CardColumns, CardDeck, Col, Container, Row } from 'react-bootstrap';
+import { CardColumns, Col, Container, Row } from 'react-bootstrap';
 import './Fruits.css';
 
 const Fruits = () => {
