@@ -23,7 +23,7 @@ const Managefruits = () => {
     const deleteFruit = (id) => {
         //console.log(id);
         //const url = `http://localhost:5050/deleteFruit/${id}`;
-        const url = `https://ancient-ocean-50478.herokuapp.com/${id}`;
+        const url = `https://ancient-ocean-50478.herokuapp.com/deleteFruit/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
