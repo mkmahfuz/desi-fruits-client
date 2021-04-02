@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Full Stack React Express Node Mongo Simple ecommerce site Project-1 by mkm
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is done by using :
+##### React: [Create React App](https://github.com/facebook/create-react-app).
+##### BootStrap: [React BootStrap](https://react-bootstrap.github.io/).
+##### Router: [React Router](https://reactrouter.com/web/guides/quick-start).
+##### FontAwesome: [React FontAwesome](https://fontawesome.com/how-to-use/on-the-web/using-with/react).
+##### FireBase : [FireBase](https://console.firebase.google.com/)
+##### MongoDB : [MongoDB](https://www.mongodb.com/)
+##### Node : [Node](https://nodejs.org/)
+##### Heroku : [Heroku](https://www.heroku.com/)
+##### ImgBB : [ImgBB](http://imgbb.com/)
 
-## Available Scripts
+  
 
-In the project directory, you can run:
+## Project Description
 
-### `yarn start`
+Load fruits data from mongodb database server.Process the data using API's created with node express. Read the json data at client side by using specific api and covert to object.
+Make Cards by using the fruits data. Every card has a clickable buy now button.
+Onclick it will route to checkout page using react-router-dom. 
+On checkout page there is a checkout button onclick the data will save to Order history of that specific user.
+On oreder page the previous order data will be load for specific user.
+On admin page, admin can upload fruit data and also delete the fruit data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Topics Covered
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  ### `react router dom`
+  ### `useParams`
+  ### `useState`
+  ### `useEffect`
+  ### `useContext`
+  ### `useHistory`
+  ### `PrivateRoute`
+  ### `Object Destructuring`
+  ### `array map`
+  ### `string to array`
+  ### `conditional rendering`
+  ### `ternary operator`
+  ### `react fontawesome icon`
+  ### `bootstrap card`
+  ### `responsive web and mobile view`
+  ### `dynamic data`
+  ### `image upload`
+  ### `save data on DB`
+  ### `CRUD operations`
+  ### `API create and use`
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Code
+Github Repository : [https://github.com/]
+ 
+## Live Link
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  Client side Host at firebase hosting: [https://desi-fruits.web.app/]

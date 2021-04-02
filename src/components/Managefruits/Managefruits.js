@@ -48,22 +48,18 @@ const Managefruits = () => {
                     </tr>
                 </thead>
                 <tbody>
-
                     {
-                        //orders.map(order => <tr key={order._id}><Order order={order}></Order></tr>)
                         fruits.map(fruit => <tr key={fruit._id}>
                             <td>{fruit.name}</td>
                             <td>{fruit.quantity}</td>
                             <td>{fruit.price}</td>
                             <td><button onClick={() => deleteFruit(fruit._id)}>Delete</button></td>
                         </tr>)
-
                     }
-
                 </tbody>
             </Table>
 
-            
+
             <div style={{ marginTop: '2rem' }}>
 
                 {

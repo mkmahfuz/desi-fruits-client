@@ -63,24 +63,6 @@ const Addfruits = () => {
         <div>
             <h2>Add Fruits </h2>
 
-            <div>
-
-                <form onSubmit={handleSubmit(onSubmit)}>
-
-                    Name: <input type="text" name="name" defaultValue="fruit's name" ref={register} /><br />
-                    Price: <input type="number" name="price" defaultValue="100" ref={register} /><br />
-                    Quantity: <input type="number" name="quantity" defaultValue="1" ref={register} /><br />
-                    Image: <input type="file" name="image" onChange={(evnt) => handleImageUpload(evnt)} /><br />
-
-                    <input type="submit" />
-                </form>
-
-            </div>
-            <div>
-                {
-                    <p>Info: {info && 'Fruit info added successfully'}</p>
-                }
-            </div>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Fruit's Name</Form.Label>
@@ -95,14 +77,14 @@ const Addfruits = () => {
                     <Form.Control type="number" name="quantity" defaultValue="1" ref={register} />
                 </Form.Group>
                 <Form.Group>
-                    <Form.File id="exampleFormControlFile1" name="image" label="Image Upload" onChange={(evnt) => handleImageUpload(evnt)}/>
+                    <Form.File id="exampleFormControlFile1" name="image" label="Add Photo" onChange={(evnt) => handleImageUpload(evnt)}/>
                 </Form.Group>
 
                 <Button className='float-right' variant="primary" type="submit">Save</Button>
             </Form>
             <div>
                 {
-                    <p>Info: {info && 'Fruit info added successfully'}</p>
+                    <p>{info && 'Fruit info added successfully'}</p>
                 }
             </div>
         </div>

@@ -60,7 +60,9 @@ const Login = () => {
             <div className='login-container'>
                 <h2>Desi Fruits login </h2>
                 <div className='google-signIn'>
-                    <p>----------------Sign in with google---------------</p>
+                    <p>-------- --------</p>
+                    <p>--- Google Sign In ---</p>
+                    <p>-------- --------</p>
 
                     <button onClick={handleGoogleSignIn}><FontAwesomeIcon icon={faGoogle} style={{ marginRight: '2rem' }} /><span >Continue with Google</span></button>
 

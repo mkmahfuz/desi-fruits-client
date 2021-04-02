@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Col, Container, Row ,Table} from 'react-bootstrap';
+import { Col, Container, Row, Table } from 'react-bootstrap';
 import { UserContext } from '../../App';
 import Order from '../Order/Order';
 import './Orders.css';
@@ -23,8 +23,8 @@ const Orders = () => {
         <Container className='all-fruits'>
             <Row>
                 <Col>
-                <h5 id="order-head">Hi, {loggedInUser.name} Your Order's history :</h5>
-                <Table striped bordered hover>
+                    <h5 id="order-head">Hi, {loggedInUser.name} Your Order's history :</h5>
+                    <Table striped bordered hover>
                         <thead>
                             <tr>
                                 <th>OrderID</th>
@@ -35,15 +35,13 @@ const Orders = () => {
                                 <th>Status</th>
                             </tr>
                         </thead>
-                        <tbody>                            
-                                {
-                                   orders.map(order => <tr key={order._id}><Order order={order}></Order></tr>) 
-                                }
-                                                                                 
-                            
+                        <tbody>
+                            {
+                                orders.map(order => <tr key={order._id}><Order order={order}></Order></tr>)
+                            }
                         </tbody>
                     </Table>
-                  
+
 
                 </Col>
             </Row>

@@ -6,7 +6,9 @@ import './Navigation.css'
 
 const Navigation = () => {
     const [loggedInUser,setLoggedInUser] = useContext(UserContext);
-    const signOut = ()=>{setLoggedInUser('')};
+    const signOut = ()=>{
+        setLoggedInUser('');
+    };
     return (
         <div className='navLink'>
             <Link to='/home'>Home</Link>

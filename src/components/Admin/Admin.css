@@ -1,9 +1,23 @@
 #admin-left{
-    background-color: rgb(141, 202, 221);
-    height:30rem;
+    /* background-color: rgb(141, 202, 221); */
+    /* height:30rem; */
     padding-left: 2rem;
     padding-top: 2rem;
 }
 .border-around{
     border-bottom:1px solid gray;
+}
+#col-left{
+    background-color: rgb(134, 221, 199);
+}
+@media only screen and (max-width:768px){
+    #admin-left{        
+        padding-left: 1rem;
+        padding-top: 1rem;
+        /* margin-top: 1rem; */
+    }
+    #col-left{
+       margin-top: 1rem;
+    }
+   
 }

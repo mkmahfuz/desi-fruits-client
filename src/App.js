@@ -32,6 +32,7 @@ function App() {
         <Router>
           <Header user={loggedInUser}></Header>
           <Switch>
+
             <Route exact path='/'>
               <Home></Home>
             </Route>
@@ -41,17 +42,16 @@ function App() {
             <Route path='/deal'>
               <Deal></Deal>
             </Route>
+
             <PrivateRoute path='/checkout'>
               <Checkout></Checkout>
             </PrivateRoute>
-
             <PrivateRoute path='/orders'>
               <Orders></Orders>
             </PrivateRoute>
-            <Route path='/admin'>
+            <PrivateRoute path='/admin'>
              <Admin></Admin>
-            </Route>
-          
+            </PrivateRoute>         
 
             <Route path='/login'>
               <Login></Login>
@@ -59,9 +59,11 @@ function App() {
             <Route exact path='*'>
               <NotFound></NotFound>
             </Route>
+
           </Switch>
           <Footer></Footer>
         </Router>
+        
         </CheckoutContext.Provider>
       </UserContext.Provider>
     </>

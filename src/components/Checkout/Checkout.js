@@ -45,7 +45,7 @@ const Checkout = () => {
                 data && history.push('/orders')
                 //if data positive then push to order page
                 //history.push('/orders');
-                
+
             });
     };
 
@@ -84,7 +84,7 @@ const Checkout = () => {
                             </tr>
                         </tbody>
                     </Table>
-                    <div className="float-right" >
+                    <div id="to-right" >
                         <Button variant="primary" onClick={() => saveOrder(_id)}>CheckOut</Button>
                     </div>
 
@@ -92,11 +92,7 @@ const Checkout = () => {
             </Row>
 
         </Container>
-        // <div>
-        //     <h2>This is checkout page</h2>
-        //     <p>Checkout product id: {checkoutProduct}</p>
-        //     <p>{name}{quantity}{price}</p>
-        // </div>
+
     );
 };
 

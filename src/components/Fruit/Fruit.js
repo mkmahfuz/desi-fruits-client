@@ -10,7 +10,7 @@ const Fruit = (props) => {
     const [checkoutProduct, setCheckoutProduct] = useContext(CheckoutContext);
 
     const handleClick = (id) => {
-        setCheckoutProduct(id);        
+        setCheckoutProduct(id);
         const url = '/checkout';
         history.push(url);
     }
@@ -24,15 +24,9 @@ const Fruit = (props) => {
 
                 <Card.Footer className="text-primary" id='card-footer'>
                     <span>Taka {price}</span><Button variant="primary" size="sm" onClick={() => handleClick(_id)}>Buy Now</Button>
-                    </Card.Footer>
+                </Card.Footer>
             </Card.Body>
         </Card>
-
-
-        // <div>
-        //     <li>Name: {name} -Price: {price} Image: <img style={{height:'200px',width:'200px'}} src={imgurl} alt={name}></img>{imgurl}</li>
-
-        // </div>
     );
 };
 
