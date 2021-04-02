@@ -1,6 +1,10 @@
-#root{
+/* #root{
     
     background-image: url('../../images/Backgrounds/back-1.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+} */
+
+#search{
+    text-align: center;
 }

@@ -1,0 +1,19 @@
+    .trSingle{
+        width:20rem;
+        background-color: rgb(241, 238, 238);
+        /* padding: 1rem; */
+        text-align: center;
+        margin-top: 2rem;
+        border-radius: 1rem !important;
+    }
+    
+    .trSingle img{
+        max-width: 14rem;
+        height: 14rem;
+        padding: 1rem;
+        /* margin: auto; */
+    }
+    #card-footer{
+        display:flex;
+        justify-content:space-between;
+    }

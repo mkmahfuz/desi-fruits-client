@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Fruit from '../Fruit/Fruit';
+import { CardColumns, CardDeck, Col, Container, Row } from 'react-bootstrap';
+import './Fruits.css';
 
 const Fruits = () => {
     const [fruits, setFruits] = useState([]);
@@ -15,15 +17,28 @@ const Fruits = () => {
     }, []);
 
     return (
-        <div>
-            <h2>this is fruits compo</h2>
-            <div>
-                {
-                    //fruits.map(fruit => <li key={fruit._id}>Name:{fruit.name}</li>)
-                    fruits.map(fruit => <Fruit key={fruit._id} fruit={fruit}></Fruit>)
-                }
-            </div>
-        </div>
+
+        <Container className='all-fruits'>
+            <Row>
+                <Col>
+                    <CardColumns>
+                        {
+                            fruits.map(fruit => <Fruit key={fruit._id} fruit={fruit}></Fruit>)
+                        }
+                    </CardColumns>
+                </Col>
+            </Row>
+
+        </Container>
+        // <div>
+        //     <h2>this is fruits compo</h2>
+        //     <div>
+        //         {
+        //             //fruits.map(fruit => <li key={fruit._id}>Name:{fruit.name}</li>)
+        //             fruits.map(fruit => <Fruit key={fruit._id} fruit={fruit}></Fruit>)
+        //         }
+        //     </div>
+        // </div>
     );
 };
 
