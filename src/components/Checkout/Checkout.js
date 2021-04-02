@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { CheckoutContext, UserContext } from '../../App';
 import { Col, Container, Row, Table, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import './Checkout.css';
 
 const Checkout = () => {
     const [checkoutProduct] = useContext(CheckoutContext);
@@ -25,8 +26,10 @@ const Checkout = () => {
 
     const saveOrder = (id) => {
         const orderData = { ...fruits };
+        const orderDate = new Date();
         orderData.email = loggedInUser.email;
         orderData.user = loggedInUser.name;
+        orderData.date = orderDate;
         console.log(orderData);
 
         //post orderData to server to save to mongodb
@@ -51,7 +54,7 @@ const Checkout = () => {
         <Container className='checkout'>
             <Row>
                 <Col>
-                    <h2>CheckOut</h2>
+                    <h2 id="check-out">CheckOut</h2>
                     <Table striped bordered hover>
                         <thead>
                             <tr>
@@ -82,7 +85,7 @@ const Checkout = () => {
                         </tbody>
                     </Table>
                     <div className="float-right" >
-                        <Button variant="primary" onClick={() => saveOrder(_id)}>Buy Now</Button>
+                        <Button variant="primary" onClick={() => saveOrder(_id)}>CheckOut</Button>
                     </div>
 
                 </Col>

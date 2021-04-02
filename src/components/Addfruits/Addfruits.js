@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { Button, Form } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
-import { useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const Addfruits = () => {
     const [imageURL, setImageURL] = useState(null);
-    const [info,setInfo] = useState(false);
+    const [info, setInfo] = useState(false);
     let history = useHistory();
 
     const { register, handleSubmit, errors } = useForm();
@@ -27,11 +28,11 @@ const Addfruits = () => {
         })
             .then(res => res.json())
             .then(data => {
-                
+
                 setInfo(data);
                 history.push('/home');
                 // <Redirect to = "/home"/>
-                console.log("ddd:",data);
+                console.log("ddd:", data);
             });
 
     };
@@ -60,7 +61,7 @@ const Addfruits = () => {
 
     return (
         <div>
-            <h2>This is adFruits page</h2>
+            <h2>Add Fruits </h2>
 
             <div>
 
@@ -76,9 +77,32 @@ const Addfruits = () => {
 
             </div>
             <div>
-                <h5>Information</h5>
                 {
-                    <p>Add fruit Info: { info && 'Fruit info added successfully'}</p>
+                    <p>Info: {info && 'Fruit info added successfully'}</p>
+                }
+            </div>
+            <Form onSubmit={handleSubmit(onSubmit)}>
+                <Form.Group controlId="formBasicEmail">
+                    <Form.Label>Fruit's Name</Form.Label>
+                    <Form.Control type="text" name="name" defaultValue="fruit's name" ref={register} />
+                </Form.Group>
+                <Form.Group controlId="formBasicEmail">
+                    <Form.Label>Price</Form.Label>
+                    <Form.Control type="number" name="price" defaultValue="100" ref={register} />
+                </Form.Group>
+                <Form.Group controlId="formBasicEmail">
+                    <Form.Label>Quantity</Form.Label>
+                    <Form.Control type="number" name="quantity" defaultValue="1" ref={register} />
+                </Form.Group>
+                <Form.Group>
+                    <Form.File id="exampleFormControlFile1" name="image" label="Image Upload" onChange={(evnt) => handleImageUpload(evnt)}/>
+                </Form.Group>
+
+                <Button className='float-right' variant="primary" type="submit">Save</Button>
+            </Form>
+            <div>
+                {
+                    <p>Info: {info && 'Fruit info added successfully'}</p>
                 }
             </div>
         </div>

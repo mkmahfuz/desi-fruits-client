@@ -1,0 +1,9 @@
+#admin-left{
+    background-color: rgb(141, 202, 221);
+    height:30rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+.border-around{
+    border-bottom:1px solid gray;
+}

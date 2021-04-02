@@ -7,7 +7,7 @@ const Home = () => {
         
     return (
         <div>
-            <h6 id='search'>Search will be implemented later</h6>
+            <h6 id='search'></h6>
             <Fruits></Fruits>
         </div>
     );

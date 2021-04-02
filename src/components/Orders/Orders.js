@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Col, Container, Row ,Table} from 'react-bootstrap';
 import { UserContext } from '../../App';
 import Order from '../Order/Order';
+import './Orders.css';
 
 const Orders = () => {
     const [orders, setOrders] = useState([]);
@@ -22,43 +23,32 @@ const Orders = () => {
         <Container className='all-fruits'>
             <Row>
                 <Col>
-                <h5>Hi, {loggedInUser.name} Your Orders :</h5>
+                <h5 id="order-head">Hi, {loggedInUser.name} Your Order's history :</h5>
                 <Table striped bordered hover>
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Date</th>
+                                <th>OrderID</th>
+                                <th>Order Date</th>
                                 <th>Description</th>
                                 <th>Quantity</th>
                                 <th>Price</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>                            
                                 {
-                                   orders.map(order => <tr><Order key={order._id} order={order}></Order></tr>) 
+                                   orders.map(order => <tr key={order._id}><Order order={order}></Order></tr>) 
                                 }
                                                                                  
                             
                         </tbody>
                     </Table>
-                    
-
-                    {
-                       // orders.map(order => <Order key={order._id} order={order}></Order>)
-                    }
+                  
 
                 </Col>
             </Row>
 
         </Container>
-
-        // <div>
-        //     <h2>this is orders page</h2>
-        //     <h5>You have {orders.length} orders</h5>
-        //     {
-        //         orders.map(order => <Order key={order._id} order={order}></Order>)
-        //     }
-        // </div>
     );
 };
 

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 
 const Managefruits = () => {
     const [fruits, setFruits] = useState([]);
-    const [info,setInfo] = useState(false);
-    
+    const [info, setInfo] = useState(false);
+
 
     useEffect(() => {
         const url = 'http://localhost:5050/allFruits';
@@ -16,38 +17,57 @@ const Managefruits = () => {
             });
     }, [info]);
 
-    
+
 
     const deleteFruit = (id) => {
-         console.log(id); 
-         const url = `http://localhost:5050/deleteFruit/${id}`;
-         fetch(url,{
-             method: 'DELETE'
-         })
-             .then(res => res.json())
-             .then(data => {
-                 console.log(data);
-                 setInfo(data);
-                 
-             });
-        
-        };
-        
+        console.log(id);
+        const url = `http://localhost:5050/deleteFruit/${id}`;
+        fetch(url, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setInfo(data);
+
+            });
+
+    };
+
 
     return (
         <div>
-            {
-                fruits.map(fruit => <li key={fruit._id}>
-                    Fruits Name: {fruit.name}
-                   Quantity: {fruit.quantity}
-                   Price: {fruit.price}
-                    <button onClick={() => deleteFruit(fruit._id)}>Delete</button>
-                </li>)
-            }
-            <div>
-                <h5>Information</h5>
+            <h2>Manage Fruits </h2>
+            <Table striped bordered hover>
+                <thead>
+                    <tr>
+                        <th>Fruit Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {
+                        //orders.map(order => <tr key={order._id}><Order order={order}></Order></tr>)
+                        fruits.map(fruit => <tr key={fruit._id}>
+                            <td>{fruit.name}</td>
+                            <td>{fruit.quantity}</td>
+                            <td>{fruit.price}</td>
+                            <td><button onClick={() => deleteFruit(fruit._id)}>Delete</button></td>
+                        </tr>)
+
+                    }
+
+                </tbody>
+            </Table>
+
+            
+            <div style={{ marginTop: '2rem' }}>
+
                 {
-                    <p>Delete Info: { info && 'Deleted successfully'}</p>
+                    <p>{info && 'Deleted successfully'}</p>
                 }
             </div>
         </div>

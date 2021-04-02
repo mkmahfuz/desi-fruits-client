@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import './Login.css';
 //firebase
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -49,29 +50,24 @@ const Login = () => {
             })
             .catch(err => {
                 console.log(err);
-                setCustomErrors({error:err});
+                setCustomErrors({ error: err });
             })
         // console.log('signed in click')
     }
 
     return (
         <div>
-            <h2>This is login page</h2>
-            <div className='google-signIn'>
-                    <p>----------------Or---------------</p>
+            <div className='login-container'>
+                <h2>Desi Fruits login </h2>
+                <div className='google-signIn'>
+                    <p>----------------Sign in with google---------------</p>
 
                     <button onClick={handleGoogleSignIn}><FontAwesomeIcon icon={faGoogle} style={{ marginRight: '2rem' }} /><span >Continue with Google</span></button>
 
 
                 </div>
-                {/* errors and other infor*/}
-                <div className='error-info'>
-                    <p style={{borderBottom:'1px solid grey'}}>Other Information</p>
-                    
-                    <p style={{ color: 'red' }}>{customErrors.error}</p>
-                    <p style={{ color: 'blue' }}>{customErrors.info}</p>
-                    
-                </div>
+               
+            </div>
         </div>
     );
 };
