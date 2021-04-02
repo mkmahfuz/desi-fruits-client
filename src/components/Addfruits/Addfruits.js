@@ -29,7 +29,7 @@ const Addfruits = () => {
             .then(data => {
                 
                 setInfo(data);
-                history.push('/home ');
+                history.push('/home');
                 // <Redirect to = "/home"/>
                 console.log("ddd:",data);
             });

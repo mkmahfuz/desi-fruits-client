@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 const Managefruits = () => {
     const [fruits, setFruits] = useState([]);
     const [info,setInfo] = useState(false);
+    
 
     useEffect(() => {
         const url = 'http://localhost:5050/allFruits';
@@ -11,8 +12,11 @@ const Managefruits = () => {
             .then(data => {
                 //console.log(data);
                 setFruits(data);
+                setInfo(false);
             });
-    }, []);
+    }, [info]);
+
+    
 
     const deleteFruit = (id) => {
          console.log(id); 
@@ -24,6 +28,7 @@ const Managefruits = () => {
              .then(data => {
                  console.log(data);
                  setInfo(data);
+                 
              });
         
         };
