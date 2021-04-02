@@ -9,7 +9,8 @@ const Orders = () => {
     const [loggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        const url = 'http://localhost:5050/orders?email=' + loggedInUser.email;
+        //const url = 'http://localhost:5050/orders?email=' + loggedInUser.email;
+        const url = 'https://ancient-ocean-50478.herokuapp.com/orders?email=' + loggedInUser.email;
         console.log(url);
         fetch(url)
             .then(res => res.json())

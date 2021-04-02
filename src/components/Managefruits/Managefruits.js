@@ -7,7 +7,8 @@ const Managefruits = () => {
 
 
     useEffect(() => {
-        const url = 'http://localhost:5050/allFruits';
+        //const url = 'http://localhost:5050/allFruits';
+        const url = 'https://ancient-ocean-50478.herokuapp.com/allFruits';
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -20,8 +21,9 @@ const Managefruits = () => {
 
 
     const deleteFruit = (id) => {
-        console.log(id);
-        const url = `http://localhost:5050/deleteFruit/${id}`;
+        //console.log(id);
+        //const url = `http://localhost:5050/deleteFruit/${id}`;
+        const url = `https://ancient-ocean-50478.herokuapp.com/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

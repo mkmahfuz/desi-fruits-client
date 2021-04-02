@@ -20,7 +20,8 @@ const Addfruits = () => {
         //console.log(data);
         console.log(fruitData);
         //post fruitdata to server to save to mongodb
-        const url = 'http://localhost:5050/addFruit';
+        //const url = 'http://localhost:5050/addFruit';
+        const url = 'https://ancient-ocean-50478.herokuapp.com/addFruit';
         fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

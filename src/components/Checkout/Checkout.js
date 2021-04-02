@@ -14,7 +14,8 @@ const Checkout = () => {
 
     useEffect(() => {
         const id = checkoutProduct;
-        const url = `http://localhost:5050/fruit/${id}`;
+        //const url = `http://localhost:5050/fruit/${id}`;
+        const url = `https://ancient-ocean-50478.herokuapp.com/fruit/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -33,7 +34,8 @@ const Checkout = () => {
         console.log(orderData);
 
         //post orderData to server to save to mongodb
-        const url = 'http://localhost:5050/addOrder';
+        //const url = 'http://localhost:5050/addOrder';
+        const url = 'https://ancient-ocean-50478.herokuapp.com/addOrder';
         fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

@@ -8,7 +8,8 @@ const Fruits = () => {
     const [loading,setLoading] = useState(true);
 
     useEffect(() => {
-        const url = 'http://localhost:5050/allFruits';
+        //const url = 'http://localhost:5050/allFruits';
+        const url = 'https://ancient-ocean-50478.herokuapp.com/allFruits';
         fetch(url)
             .then(res => res.json())
             .then(data => {
